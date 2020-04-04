@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notepad</title>
+</head>
+<body>
+    <h1>home, sweet home!</h1>
+    {% for qs in query %}
+    <ul>
+        <li>{{qs.title}}</li><a href="{{ qs.get_update_url }}">update</a><a href="{{ qs.get_delete_url }}">delete</a>
+    </ul>
+    {% endfor %}
+</body>
+</html>
